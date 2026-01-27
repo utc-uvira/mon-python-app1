@@ -15,4 +15,4 @@ if nom: # On attend que l'utilisateur ait écrit son nom
         st.success(f"Bonjour Mr {nom}")
     
     # Petit bonus visuel
-    st.balloons("UTC")
+    st.balloons()
