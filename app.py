@@ -1,10 +1,18 @@
-print("Hello")
-nom=input("enter name")
-gender=input("M/F")
+import streamlit as st
 
-if gender=="F":
-    print("Mm", nom)
-elif gender =="M":
-    print("Mr", nom)
-else:
-    print("gender must be m/m")
+st.title("Mon Application de Bienvenue")
+
+st.write("Hello")
+
+# Utilisation des widgets Streamlit au lieu de input()
+nom = st.text_input("Entrez votre nom")
+gender = st.radio("Sexe", ["M", "F"])
+
+if nom: # On attend que l'utilisateur ait écrit son nom
+    if gender == "F":
+        st.success(f"Bonjour Mme {nom}")
+    elif gender == "M":
+        st.success(f"Bonjour Mr {nom}")
+    
+    # Petit bonus visuel
+    st.balloons()
