@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("Mon Application de Bienvenue")
+st.title("Bienvenue à l’UTC – Ma première application en Python")
 
 st.write("Hello")
 
